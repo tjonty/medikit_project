@@ -1,0 +1,57 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Patient & Resource{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/report details.css' %}">
+{% endblock %}
+{% block body_block %}
+
+<div class="container">
+    <div class="row-fluid pricing-table pricing-three-column">
+        <div class="span4 plan">
+          <div class="plan-name-gold">
+            <h2>{{ record_detail.Disease }}</h2>
+          </div>
+          <ul>
+
+              <li class="plan-feature">
+                  <p>Patient Personal name</p>
+                  {{ record_detail.Patient_Personal_name }}
+              </li>
+
+              <li class="plan-feature">
+                  <p>Doctor Personal Name</p>
+                  {{ record_detail.Doctor_Personal_name }}
+              </li>
+
+              <li class="plan-feature">
+                  <p>Date</p>
+                  {{ record_detail.Appointment_Date }}
+              </li>
+
+              {% if record_detail.Report_Name %}
+ 	           	<li class="plan-feature">
+                    <p>Report Name</p>
+                    {{ record_detail.Report_Name }}
+                </li>
+              {% endif %}
+
+              {% if Medicine_Prescription %}
+ 	           	<li class="plan-feature">
+                    <p>Medicine Prescription</p>
+                    {{ record_detail.Medicine_Prescription }}
+                </li>
+              {% endif %}
+
+              {% if record_detail.Report_Document %}
+ 	           	<li class="plan-feature">
+                    <p>Report</p>
+                    <img class="img_class" src="{{ record_detail.Report_Document.url }}">
+                </li>
+              {% endif %}
+          </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
