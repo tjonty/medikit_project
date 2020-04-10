@@ -1,0 +1,67 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}patient - Sign Up{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+{% block body_block %}
+{% if registered %}
+    <h1>  THANK YOU FOR REGISTRATION </h1>
+{% else %}
+    <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Registration</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" name="username" placeholder="username" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Patient_Personal_name" class="col-sm-3 control-label">Personal name </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Patient_Personal_name" name="Patient_Personal_name" placeholder="Patient_Personal_name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Patient_Age" class="col-sm-3 control-label">Age </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="Patient_Age" name="Patient_Age" placeholder="Patient_Age" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Patient_Address" class="col-sm-3 control-label">Address </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Patient_Address" name="Patient_Address" placeholder="Patient_Address" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Patient_Pin" class="col-sm-3 control-label">Pincode </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="Patient_Pin" name="Patient_Pin" placeholder="Patient_Pin" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Patient_State" class="col-sm-3 control-label">State </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Patient_State" name="Patient_State" placeholder="Patient_State" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,201 @@
+
+.section-blog-header {
+  padding: 1em 0 4em 0;
+  background: #444;***REMOVED***
+.section-blog-header h3 {
+    color: white;
+    font-size: 1.4em;
+    line-height: 1.3;***REMOVED***
+.section-blog-header form {
+    margin-top: 1.5em;***REMOVED***
+.section-blog-header form input {
+      display: inline-block;***REMOVED***
+.section-blog-header form input.email {
+        margin-bottom: 1em;
+        padding: 0.35em 0 0.4em 0;
+        font-size: 1.1em;
+        text-indent: 0.8em;
+        border-radius: 4px;
+        box-shadow: 0px 3px 0 0px #ccc;
+        border: none;
+        outline: none;
+        width: 100%;***REMOVED***
+      .section-blog-header form input[type=submit***REMOVED*** {
+        cursor: pointer;
+        color: white;
+        font-size: 1em;
+        border-radius: 4px;
+        border: 0;
+        padding: 0.5em 1.5em;
+        outline: 0;
+        text-align: center;
+        display: inline-block;
+        background-color: #23a45a;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #23a45a), color-stop(100%, #279053));
+        background-image: -webkit-linear-gradient(#23a45a, #279053);
+        background-image: -moz-linear-gradient(#23a45a, #279053);
+        background-image: -o-linear-gradient(#23a45a, #279053);
+        background-image: linear-gradient(#23a45a, #279053);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff$color1', endColorstr='#ff$color2', GradientType=0);
+        box-shadow: 0 3px 0 0 #186d3c;***REMOVED***
+        .section-blog-header form input[type=submit***REMOVED***:hover {
+          background-color: #33b56a;
+          background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33b56a), color-stop(100%, #35a463));
+          background-image: -webkit-linear-gradient(#33b56a, #35a463);
+          background-image: -moz-linear-gradient(#33b56a, #35a463);
+          background-image: -o-linear-gradient(#33b56a, #35a463);
+          background-image: linear-gradient(#33b56a, #35a463);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff$color1', endColorstr='#ff$color2', GradientType=0);***REMOVED***
+
+@media (min-width: 768px) {
+  .section-blog-header {
+    padding: 1em 0 3em 0;
+    text-align: center;***REMOVED***
+    .section-blog-header form input.email {
+      margin-right: 0.25em;
+      width: 27em;***REMOVED******REMOVED***
+.section-blog {
+  padding: 3.25em 0 6em 0;
+  background: #white;***REMOVED***
+  .section-blog .articles {
+    flex-wrap: wrap;
+    display: flex;***REMOVED***
+    .section-blog .articles .article {
+      width: 100%;
+      flex-direction: column;
+      position: relative;
+      border-top: 1px solid #eee;
+      border-radius: 4px;
+      box-shadow: rgba(66, 113, 151, 0.09) 0px 1px 1px 1px;
+      margin-bottom: 2em;
+      overflow: hidden;***REMOVED***
+      .section-blog .articles .article:hover {
+        transform: translate(0, -2px);
+        box-shadow: 0 2px 3px rgba(36, 46, 53, 0.15), 0 0 0 1px #f7f9fa;***REMOVED***
+        .section-blog .articles .article:hover h3 a {
+          color: #3c184e;***REMOVED***
+    @media (min-width: 768px) {
+      .section-blog .articles .article {
+        width: calc(100%/ 2 - 70px / 2);
+        margin-right: 35px;***REMOVED***
+        .section-blog .articles .article:nth-of-type(2n) {
+          margin-right: 0;***REMOVED******REMOVED***
+    @media (min-width: 992px) {
+      .section-blog .articles .article {
+        width: calc(100%/ 3 - 70px / 3);
+        margin-right: 35px;***REMOVED***
+        .section-blog .articles .article:nth-of-type(2n) {
+          margin-right: 35px;***REMOVED***
+        .section-blog .articles .article:nth-of-type(3n) {
+          margin-right: 0;***REMOVED******REMOVED***
+    .section-blog .articles .inner {
+      padding: 0 1.1em 0.6em;***REMOVED***
+    .section-blog .articles h3 {
+      font-size: 0.95em;
+      line-height: 1.3;***REMOVED***
+      .section-blog .articles h3 a {
+        color: #444444;
+        font-weight: 500;***REMOVED***
+        .section-blog .articles h3 a:hover {
+          text-decoration: none;***REMOVED***
+  .section-blog .pagination-links {
+    text-align: center;
+    margin-top: 2em;***REMOVED***
+    .section-blog .pagination-links .pagination-link {
+      display: inline-block;
+      margin: 0 1.75em;
+      color: #888;
+      font-weight: 500;***REMOVED***
+
+.section-blog-post {
+  padding: 3.25em 0 6em 0;
+  background: white;***REMOVED***
+  .section-blog-post .post-container {
+    max-width: 740px;
+    padding: 0 20px;
+    margin: 0 auto;***REMOVED***
+  .section-blog-post a.back {
+    font-size: 0.85em;***REMOVED***
+  .section-blog-post h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #242E35;***REMOVED***
+  .section-blog-post .by {
+    display: block;
+    font-size: 0.85em;
+    margin-bottom: 1.75em;
+    color: #666;***REMOVED***
+    .section-blog-post .by strong {
+      font-weight: 700;
+      color: #111;***REMOVED***
+  .section-blog-post .featured-image {
+    margin-bottom: 2.5em;***REMOVED***
+  .section-blog-post .post-author {
+    margin-bottom: 2.5em;
+    overflow: hidden;***REMOVED***
+    .section-blog-post .post-author .headshot {
+      float: left;
+      width: 94px;
+      height: 94px;
+      border-radius: 94px;
+      overflow: hidden;
+      margin-right: 1.25em;***REMOVED***
+    .section-blog-post .post-author p {
+      padding-top: 0.5em;
+      font-style: italic;
+      font-size: 1.15em;***REMOVED***
+  .section-blog-post .post-body {
+    margin-bottom: 2.5em;
+    /* Responsive default image width */
+    /* Image caption */
+    /* Responsive floating */***REMOVED***
+    .section-blog-post .post-body h1, .section-blog-post .post-body h2, .section-blog-post .post-body h3, .section-blog-post .post-body h4, .section-blog-post .post-body h5 {
+      font-weight: 500;
+      margin-bottom: 1em;
+      margin-top: 1.5em;***REMOVED***
+    .section-blog-post .post-body ul, .section-blog-post .post-body ol {
+      margin-bottom: 1.25em;***REMOVED***
+      .section-blog-post .post-body ul li, .section-blog-post .post-body ol li {
+        margin-bottom: 0.25em;***REMOVED***
+    .section-blog-post .post-body pre {
+      margin-bottom: 2em;***REMOVED***
+    .section-blog-post .post-body img {
+      max-width: 100%;
+      height: auto;***REMOVED***
+    .section-blog-post .post-body figcaption {
+      font-style: italic;
+      text-align: center;
+      color: #ccc;***REMOVED***
+    .section-blog-post .post-body p {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 1.25em;
+      line-height: 1.58;
+      margin-bottom: 1.25em;
+      font-weight: 400;
+      letter-spacing: -.003em;***REMOVED***
+    @media only screen and (min-width: 720px) {
+      .section-blog-post .post-body .butter-float-left {
+        float: left;
+        margin: 0px 10px 10px 0px;***REMOVED***
+      .section-blog-post .post-body .butter-float-right {
+        float: right;
+        margin: 0px 0px 10px 10px;***REMOVED******REMOVED***
+    .section-blog-post .post-body table {
+      margin-bottom: 2em;***REMOVED***
+      .section-blog-post .post-body table th {
+        padding: 0.75em;
+        border: 1px solid #ddd;***REMOVED***
+      .section-blog-post .post-body table td {
+        padding: 0.75em;
+        vertical-align: top;
+        border: 1px solid #ddd;***REMOVED***
+
+body{
+background-color: #ced1d6;
+}
+
+.ul-top-list li{
+    list-style-type:none;
+    border-bottom: 1px solid;
+    text-align:center;
+}

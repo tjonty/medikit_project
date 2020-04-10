@@ -1,0 +1,51 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Articles{% endblock %}
+{% block styles %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/article list.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+    <div class="section-blog-post">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="post-container">
+              <a class="back" href="{% url 'medi_app2:articlelist'%}">Back to all posts</a>
+
+              <h1>{{ article_detail.Title***REMOVED***}</h1>
+
+              <span class="by">Posted by <strong>{{ article_detail.Author***REMOVED***}</strong> on <strong>{{ article_detail.Published_Date***REMOVED***}</strong></span>
+
+              <div class="featured-image">
+                <img src="{{ article_detail.Image.url***REMOVED***}" width="100%">
+              </div>
+
+              <div class="post-body">
+                <p>{{ article_detail.Content***REMOVED***}</p>
+              </div>
+            ***REMOVED***% if article_detail.Author == user %}
+                    <a class="btn btn-blog pull-right marginBottom10" href="/articlelist/{{article_detail.id}}/delete/">DELETE</a>
+    				<a class="btn btn-blog pull-right marginBottom10" href="/articlelist/{{article_detail.id}}/update/">UPDATE</a>
+            ***REMOVED***% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+{% endblock %}

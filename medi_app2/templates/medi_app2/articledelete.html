@@ -1,0 +1,24 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Articles Delete{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block body_block %}
+{% if registered %}
+    <h1>  THANK YOU FOR REGISTRATION </h1>
+{% else %}
+    <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Registration</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <center><b>Are You Sure ?</b></center>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">YES</button>
+        </form>
+    </div>
+{% endif %}
+
+{% endblock %}

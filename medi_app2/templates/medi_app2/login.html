@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Log In{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block body_block %}
+    <div class="loginbox">
+        <h1>Login</h1>
+        <form action="{% url 'medi_app2:login' %}" method="post">
+        ***REMOVED***% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="" value="Login">
+        </form>
+    </div>
+{% endblock %}

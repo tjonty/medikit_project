@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Patient & Resource{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/doctor list.css' %}">
+{% endblock %}
+
+{% block body_block %}
+{% if user.is_authenticated %}
+
+    <div class="row d-flex justify-content-center container">
+        <div class="col-md-8">
+            <div class="card-hover-shadow-2x mb-3 card">
+                <div class="card-header-tab card-header">
+                    <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="fa fa-tasks">
+                        </i>&nbsp;Doctor Lists
+                    </div>
+                </div>
+                <div class="scroll-area-sm">
+                    <perfect-scrollbar class="ps-show-limits">
+                        <div style="position: static;" class="ps ps--active-y">
+                            <div class="ps-content">
+                                <ul class=" list-group list-group-flush">
+                                ***REMOVED***% for doctor in doctor_list %}
+                                    ***REMOVED***% if doctor %}
+                                            <li class="list-group-item">
+                                                <div class="todo-indicator bg-warning"></div>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left">
+                                                                <div class="widget-heading">{{ doctor.user.username***REMOVED***}
+                                                                    <div class="badge"><i>Address: {{ doctor.Hospital_Address***REMOVED***}</i></div>
+                                                                    <div class="widget-subheading">Email:<a href="{% url 'medi_app2:email' %}" > {{ doctor.user.email***REMOVED***}</a></div>
+                                                                    <div class="badge"><i>{{ doctor.Doctor_Education***REMOVED***}</i></div>
+                                                                    <div class="badge"><i>{{ doctor.Doctor_Speciality***REMOVED***}</i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </li>
+                                    ***REMOVED***% endif %}
+                                ***REMOVED***% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </perfect-scrollbar>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <center><h1 style="color: black;">USER NOT LOGIN</h1></center>
+    <center><a href="{% url 'medi_app2:login' %}" class="btn btn-student btn-lg" role="button">LOGIN</a></center>
+{% endif %}
+
+{% endblock %}

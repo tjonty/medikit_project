@@ -1,0 +1,105 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Doctor - Sign Up{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+{% block body_block %}
+{% if registered %}
+    <h1>  THANK YOU FOR REGISTRATION </h1>
+{% else %}
+    <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Registration</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" name="username" placeholder="username" class="form-control" autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_Personal_name" class="col-sm-3 control-label">Personal name </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Doctor_Personal_name" name="Doctor_Personal_name" placeholder="Doctor Personal name" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_experience" class="col-sm-3 control-label">Experience </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="Doctor_experience" name="Doctor_experience" placeholder="Doctor_experience" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_Education" class="col-sm-3 control-label">Education </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Doctor_Education" name="Doctor_Education" placeholder="Doctor_Education" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_Speciality" class="col-sm-3 control-label">Speciality </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Doctor_Speciality" name="Doctor_Speciality" placeholder="Doctor_Speciality" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Hospital_Address" class="col-sm-3 control-label">Hospital Add. </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Hospital_Address" name="Hospital_Address" placeholder="Hospital_Address" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Hospital_Pin" class="col-sm-3 control-label">Hospital Pin </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Hospital_Pin" name="Hospital_Pin" placeholder="Hospital_Pin" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Hospital_State" class="col-sm-3 control-label">Hospital State </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Hospital_State" name="Hospital_State" placeholder="Hospital_State" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_Certificate" class="col-sm-3 control-label">Doctor Certi. </label>
+                    <div class="col-sm-9">
+                        <input type="file" id="Doctor_Certificate" name="Doctor_Certificate" placeholder="Doctor_Certificate" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Doctor_Photo" class="col-sm-3 control-label">Doctor Photo </label>
+                    <div class="col-sm-9">
+                        <input type="file" id="Doctor_Photo" name="Doctor_Photo" placeholder="Doctor_Photo" class="form-control">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}
+
+

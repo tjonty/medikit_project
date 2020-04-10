@@ -1,0 +1,62 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Lab - Sign Up{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+{% block body_block %}
+{% if registered %}
+    <h1>  THANK YOU FOR REGISTRATION </h1>
+{% else %}
+    <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Registration</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" name="username" placeholder="username" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Person_name" class="col-sm-3 control-label">Personal name </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Person_name" name="Person_name" placeholder="Person_name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Address" class="col-sm-3 control-label">Address </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Address" name="Address" placeholder="Address" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Pincode" class="col-sm-3 control-label">Pincode </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="Pincode" name="Pincode" placeholder="Pincode" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Lab_Certificate" class="col-sm-3 control-label">Lab Certi. </label>
+                    <div class="col-sm-9">
+                        <input type="file" id="Lab_Certificate" name="Lab_Certificate" placeholder="Lab_Certificate" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+             </form>
+    </div>
+
+{% endif %}
+{% endblock %}

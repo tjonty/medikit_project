@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+{% block body_block %}
+<div>
+  <center>
+  <h2>Sign Up</h2>
+  <p class="lead">Select below the type of account you want to create</p>
+  <a href="{% url 'medi_app2:patient_signup' %}" class="btn btn-student btn-lg" role="button">I'm a Patient</a>
+  <a href="{% url 'medi_app2:doctor_signup' %}" class="btn btn-teacher btn-lg" role="button">I'm a Doctor</a>
+  <a href="{% url 'medi_app2:lab_signup' %}" class="btn btn-teacher btn-lg" role="button">I'm a Lab_Person</a>
+  </center>
+</div>
+{% endblock %}

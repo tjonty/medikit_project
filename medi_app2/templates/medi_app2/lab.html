@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}News{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/specialist.css' %}">
+{% endblock %}
+{% block body_block %}
+
+<h1>Top Laboratories of Vadodara </h1>
+
+    <!--Slideshow starts here -->
+    <div class="container carousel-inner no-padding">
+      <div class="carousel-item active">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <b> <p style="margin-top: 25px;" class="card-text" ></p> </b>
+          <div class="card" style="width: 18rem;">
+          ***REMOVED***% load staticfiles %}
+              <img src="{% static 'lab/toparani.jpeg' %}" class="card-img-top" height="250px"  width="250px" alt="My image"/>
+            <div class="card-body" style="margin-top: 25px;" >
+                 <h5 class="card-title">Toparani Lab</h5>
+                <p class="card-text" >Phone:0265 252 2555</p>
+                <a href="http://www.topranilabs.com/" target="_blank" class="btn btn-primary">Know more</a>
+            </div>
+          </div>
+       </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+             <b> <p style="margin-top: 25px;" class="card-text" ></p> </b>
+          <div class="card" style="width: 18rem;">
+          ***REMOVED***% load staticfiles %}
+            <img src="{% static 'lab/devine.png' %}" class="card-img-top"  height="250px"  width="250px" alt="...">
+            <div class="card-body" style="margin-top: 25px;">
+              <h5 class="card-title">DIVINE LAB</h5>
+              <p class="card-text">Phone:98251 70930</p>
+              <a href="https://www.divinelaboratory.com/" target="_blank" class="btn btn-primary"> Know more </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+             <b> <p style="margin-top: 25px;" class="card-text" ></p> </b>
+          <div class="card" style="width: 18rem;">
+          ***REMOVED***% load staticfiles %}
+            <img src="{% static 'lab/vcl.jpeg'%}" class="card-img-top"  height="250px"  width="250px" alt="...">
+            <div class="card-body" style="margin-top: 25px;">
+              <h5 class="card-title">Vadodara clinical laboratories</h5>
+              <p class="card-text">Phone:63596 48112</p>
+              <a href="https://www.vcllab.in/" target="_blank" class="btn btn-primary">Know more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

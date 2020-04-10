@@ -1,0 +1,70 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Doctor{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+{% block body_block %}
+***REMOVED***% if user.is_authenticated %}
+        <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Report Entry</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <label for="Patient_Personal_name" class="col-sm-3 control-label">Patient name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Patient_Personal_name" name="Patient_Personal_name" placeholder="Patient_Personal_name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Doctor_name</label>
+                    <div class="col-sm-9">
+                    ***REMOVED***{ form.Doctor_Personal_name***REMOVED***}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Appointment_Date" class="col-sm-3 control-label">Appointment Date </label>
+                    <div class="col-sm-9">
+                        <input type="date" id="Appointment_Date" name="Appointment_Date" placeholder="Appointment_Date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Disease" class="col-sm-3 control-label">Disease </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Disease" name="Disease" placeholder="Disease" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Medicine_Prescription" class="col-sm-3 control-label">Prescription </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Medicine_Prescription" name="Medicine_Prescription" placeholder="Medicine_Prescription" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Report_Name" class="col-sm-3 control-label">Report Name </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Report_Name" name="Report_Name" placeholder="Report_Name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Report_Document" class="col-sm-3 control-label">Report Document </label>
+                    <div class="col-sm-9">
+                        <input type="file" id="Report_Document" name="Report_Document" placeholder="Report_Document" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+             </form>
+        </div>
+
+***REMOVED***% else %}
+        <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <h1>User is not logged in</h1>
+                    </div>
+                </div>
+             </form>
+        </div>
+***REMOVED***% endif %}
+{% endblock %}

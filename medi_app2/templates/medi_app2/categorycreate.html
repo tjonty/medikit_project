@@ -1,0 +1,27 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Category Create{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block body_block %}
+{% if registered %}
+    <h1>  THANK YOU FOR REGISTRATION </h1>
+{% else %}
+    <div class="container">
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" role="form">
+                <h2>Registration</h2>
+            ***REMOVED***% csrf_token %}
+                <div class="form-group">
+                    <label for="Title" class="col-sm-3 control-label">Title</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="Title" name="Title" placeholder="Title" class="form-control" autofocus>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+{% endif %}
+
+{% endblock %}

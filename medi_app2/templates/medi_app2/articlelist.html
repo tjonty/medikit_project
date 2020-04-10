@@ -1,0 +1,56 @@
+{% extends "medi_app2/base.html" %}
+{% load static %}
+{% block title %}Articles{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/article list.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="{% static 'css/article list.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+  <div class="list-group">
+      <center><a href="{% url 'medi_app2:categorycreate' %}" class="list-group-item">Create Category</a></center>
+      <center><a href="{% url 'medi_app2:articlecreate' %}" class="list-group-item">Create Article</a></center>
+  </div>
+</div>
+
+<center><h4><b>Recent Articles</b></h4></center>
+<div class="section-blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="articles">
+			{% for article in article_list %}
+              <div class="article">
+                <a href="{{article.id}}/detail/">
+                  <img src="{{article.Image.url}}" width="100%">
+                </a>
+                <div class="inner">
+                    <h3><a href="{{article.id}}/detail/">{{ article.Title***REMOVED***}</a></h3>
+                </div>
+              </div>
+			{% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
