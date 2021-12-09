@@ -19,8 +19,8 @@ adverse effects and other critical aspects. As a result, Medikit assists in reso
 <img width="1504" alt="Screen Shot 2021-12-08 at 10 04 02 PM" src="https://user-images.githubusercontent.com/47101523/145343105-e35aeb3b-7afb-45ae-a08f-718b29db8b1d.png">
 - Doctor List
 <img width="1501" alt="Screen Shot 2021-12-08 at 10 05 20 PM" src="https://user-images.githubusercontent.com/47101523/145343184-14cd1c6d-be35-4c6a-9fdd-5e2da983a08b.png">
-- Articles (old data. So, Image didn't store)
-<img width="1493" alt="Screen Shot 2021-12-08 at 9 43 57 PM" src="https://user-images.githubusercontent.com/47101523/145341233-e9723910-b181-4863-931a-6e375f647da2.png">
+- Articles
+<img width="1508" alt="Screen Shot 2021-12-09 at 12 39 08 AM" src="https://user-images.githubusercontent.com/47101523/145362475-14d41524-347a-433c-9685-df36a31cddcc.png">
 
 
 ## Tech/framework used ⛓
